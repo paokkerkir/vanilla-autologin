@@ -65,7 +65,7 @@
 	</Button>
 	<Frame name="AutologinAccountsFrame" parent="AccountLoginUI">
 		<Size>
-			<AbsDimension x="260" y="330"/>
+			<AbsDimension x="260" y="320"/>
 		</Size>
 		<Anchors>
 			<Anchor point="TOPRIGHT">
