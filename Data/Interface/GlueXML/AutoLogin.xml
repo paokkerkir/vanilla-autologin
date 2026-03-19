@@ -65,7 +65,7 @@
 	</Button>
 	<Frame name="AutologinAccountsFrame" parent="AccountLoginUI">
 		<Size>
-			<AbsDimension x="260" y="490"/>
+			<AbsDimension x="260" y="330"/>
 		</Size>
 		<Anchors>
 			<Anchor point="TOPRIGHT">
@@ -121,51 +121,6 @@
 			<Button name="AutologinAccountButton4" inherits="AutologinAccountButtonTemplate" id="4">
 				<Anchors>
 					<Anchor point="TOP" relativeTo="AutologinAccountButton3" relativePoint="BOTTOM">
-						<Offset>
-							<AbsDimension y="13"/>
-						</Offset>
-					</Anchor>
-				</Anchors>
-			</Button>
-			<Button name="AutologinAccountButton5" inherits="AutologinAccountButtonTemplate" id="5">
-				<Anchors>
-					<Anchor point="TOP" relativeTo="AutologinAccountButton4" relativePoint="BOTTOM">
-						<Offset>
-							<AbsDimension y="13"/>
-						</Offset>
-					</Anchor>
-				</Anchors>
-			</Button>
-			<Button name="AutologinAccountButton6" inherits="AutologinAccountButtonTemplate" id="6">
-				<Anchors>
-					<Anchor point="TOP" relativeTo="AutologinAccountButton5" relativePoint="BOTTOM">
-						<Offset>
-							<AbsDimension y="13"/>
-						</Offset>
-					</Anchor>
-				</Anchors>
-			</Button>
-			<Button name="AutologinAccountButton7" inherits="AutologinAccountButtonTemplate" id="7">
-				<Anchors>
-					<Anchor point="TOP" relativeTo="AutologinAccountButton6" relativePoint="BOTTOM">
-						<Offset>
-							<AbsDimension y="13"/>
-						</Offset>
-					</Anchor>
-				</Anchors>
-			</Button>
-			<Button name="AutologinAccountButton8" inherits="AutologinAccountButtonTemplate" id="8">
-				<Anchors>
-					<Anchor point="TOP" relativeTo="AutologinAccountButton7" relativePoint="BOTTOM">
-						<Offset>
-							<AbsDimension y="13"/>
-						</Offset>
-					</Anchor>
-				</Anchors>
-			</Button>
-			<Button name="AutologinAccountButton9" inherits="AutologinAccountButtonTemplate" id="9">
-				<Anchors>
-					<Anchor point="TOP" relativeTo="AutologinAccountButton8" relativePoint="BOTTOM">
 						<Offset>
 							<AbsDimension y="13"/>
 						</Offset>

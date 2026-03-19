@@ -103,7 +103,7 @@ LoginManager = {}
 LoginManager.State = {}
 LoginManager.SelectedAcct = nil
 LoginManager.CurrentPage = 0
-LoginManager.PageSize = 9
+LoginManager.PageSize = 4
 LoginManager.LimitReached = false
 LoginManager.from_login_screen = false
 LoginManager.has_nampower = has_nampower
@@ -190,22 +190,6 @@ function LoginManager:FromFile(file)
     end
   end
   return false
-end
-
-function LoginManager:HideSideButtons()
-  local hide_frames = {
-    "AccountLoginTurtleWebsite",
-    "AccountLoginTurtleArmory",
-    "AccountLoginTurtleKnowledgeDatabase",
-    "AccountLoginTurtleCommunityForum",
-    "AccountLoginTurtleDiscord",
-    "AccountLoginTurtleReddit",
-    "AccountLoginCinematicsButton",
-    -- "AccountLoginCreditsButton",
-  }
-  for _,frame in ipairs(hide_frames) do
-    if _G[frame] then _G[frame]:Hide() end
-  end
 end
 
 function LoginManager:MakeExtraAccountButtons()
@@ -482,7 +466,6 @@ end
 function LoginManager:UpdateUI()
   if AccountLoginUI:IsVisible() then
     self:MakeExtraAccountButtons()
-    self:HideSideButtons()
     AccountLoginSaveAccountName:Hide()
     self:UpdateLoginUI()
   elseif CharacterSelectUI:IsVisible() then
