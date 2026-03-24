@@ -465,9 +465,15 @@ end
 
 function LoginManager:UpdateUI()
   if AccountLoginUI:IsVisible() then
-    self:MakeExtraAccountButtons()
+    if not self._buttonsCreated then
+      self:MakeExtraAccountButtons()
+      self._buttonsCreated = true
+    end
     AccountLoginSaveAccountName:Hide()
     self:UpdateLoginUI()
+    -- Fix for Linux/Wine: clear focus after UI updates so the glue screen
+    -- side buttons (Armory, Community, etc.) can receive subsequent clicks.
+    AccountLoginAccountEdit:ClearFocus()
   elseif CharacterSelectUI:IsVisible() then
     self:UpdateCharacterUI()
   end
@@ -899,7 +905,7 @@ end
 local orig_AccountLogin_OnLoad = AccountLogin_OnLoad
 AccountLogin_OnLoad = function (a1,a2,a3,a4,a5,a6,a7,a8,a9)
   if orig_AccountLogin_OnLoad then orig_AccountLogin_OnLoad(a1,a2,a3,a4,a5,a6,a7,a8,a9) end
-
+  LoginManager._buttonsCreated = nil  -- allow recreation on fresh load
   LoginManager:LoadAccounts()
 end
 
