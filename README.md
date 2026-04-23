@@ -1,7 +1,7 @@
-# Turtle AutoLogin 3.0.2
+# AutoLogin 3.0.2
 * Requires [Nampower](https://gitea.com/avitasia/nampower/releases) `>= 3.2.0` (preferred) or [SuperWoW](https://github.com/balakethelock/SuperWoW/) `>= 1.4`
 
-Patch for Turtle WoW client that adds account saving and order features and character ordering and auto-login features.
+Patch for Vanilla WoW client that adds account saving and order features and character ordering and auto-login features.
 
 Resized to original 4 account slot in order to keep Main Menu unchanged.
 
@@ -47,6 +47,12 @@ Then run `source ~/.bashrc` (or the appropriate profile file) to apply.
 - Compatible with Turtle WoW's side menu buttons (Armory, Database, Community, etc.)
 
 ## Installation
+
+Download the MPQ and place in your Vanilla WoW data folder.
+
+NOTE: You need to have patched WoW.exe that allows glues patches.
+
+OR
 
 Download the repo and place the files in your WoW folder like this:
 ```
